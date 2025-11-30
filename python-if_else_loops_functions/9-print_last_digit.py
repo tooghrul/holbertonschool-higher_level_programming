@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def print_last_digit(number):
-    if number.isalnum() == True:
+    if number.isalpha() == True:
         return
     digit = abs(number) % 10
     print(digit, end="")
