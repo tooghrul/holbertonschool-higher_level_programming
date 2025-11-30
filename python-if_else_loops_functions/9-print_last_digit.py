@@ -1,3 +1,8 @@
 #!/usr/bin/python3
 def print_last_digit(number):
-    print(str(number)[-1], end="")
+    if isalnum(number) == True:
+        return
+    digit = abs(number) % 10
+    print(digit, end="")
+    return digit
+
