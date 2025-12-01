@@ -10,7 +10,7 @@ def main():
         if len(argv) != 1:
             print("{} arguments:".format(len(argv)))
         else:
-            print("1 argument")
+            print("1 argument:")
         for i in range(len(argv)):
             print("{}: {}".format(i+1, argv[i]))
 
