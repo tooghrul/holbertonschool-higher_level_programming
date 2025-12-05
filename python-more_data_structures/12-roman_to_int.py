@@ -7,11 +7,11 @@ def roman_to_int(roman_string):
     cem = 0
     if len(roman_string) == 1:
         return roman[roman_string]
-    while i <= len(roman_string) - 1:
-        if roman[roman_string[i]] < roman[roman_string[i+1]]:
-            cem += roman[roman_string[i]] - roman[roman_string[i+1]]
+    while i < len(roman_string):
+        if (roman[roman_string[i]] < roman[roman_string[i+1]]) and (i != len(roman_string) - 1):
+            cem += roman[roman_string[i+1]] - roman[roman_string[i]]
             i += 2
         else:
             cem += roman[roman_string[i]]
-            i+=1
+            i += 1
     return cem
