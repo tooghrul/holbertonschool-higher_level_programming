@@ -12,10 +12,10 @@ def roman_to_int(roman_string):
     while i < len(roman_string):
         if i != len(roman_string)-1:
             if roman[roman_string[i]] < roman[roman_string[i+1]]:
-                cem += roman[roman_string[i+1]] - roman[roman_string[i]]
+                cem += -roman[roman_string[i]]
             else:
-                cem += roman[roman_string[1+i]] + roman[roman_string[i]]
+                cem += roman[roman_string[i]]
         else:
             cem += roman[roman_string[i]]
-        i+=2
+        i+=1
     return cem
