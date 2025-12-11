@@ -58,6 +58,6 @@ class Rectangle:
             else:
                 x += self.__width*"#" + "\n"
         return x
-    
+
     def __repr__(self):
         return f"Rectangle({self.__width}, {self.__height})"
