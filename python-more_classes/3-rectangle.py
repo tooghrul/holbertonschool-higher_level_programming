@@ -50,7 +50,7 @@ class Rectangle:
         x=""
         for i in range(self.__height):
             if i == self.__height - 1:
-                x += f"{self.__width*#}"
+                x += self.__width*"#"
             else:
-                x += f"{self.__width*#}\n"
+                x += self.__width*"#" + "\n"
         return x
