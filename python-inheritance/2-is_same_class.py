@@ -3,11 +3,9 @@
 
 
 def is_same_class(obj, a_class):
-    """It uses isinstance()"""
-    if isinstance(obj, a_class):
-        return True
-    else:
-        return False
+    """It uses type()"""
+    return type(obj) is a_class
+
 
 if __name__ == "__main__":
     is_same_class()
