@@ -16,7 +16,7 @@ class BaseGeometry:
 class Rectangle(BaseGeometry):
     """This is a Rectangle class which inherits from BaseGeometry class"""
     def __init__(self, width, height):
-        super().__init__
+        super().__init__()
         try:
             Rectangle.integer_validator("width", width)
         except TypeError:
