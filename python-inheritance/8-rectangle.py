@@ -17,20 +17,7 @@ class Rectangle(BaseGeometry):
     """This is a Rectangle class which inherits from BaseGeometry class"""
     def __init__(self, width, height):
         super().__init__()
-        try:
-            self.integer_validator("width", width)
-        except TypeError:
-            raise TypeError("width must be an integer")
-        except ValueError:
-            raise ValueError("width must be greater than 0")
-        else:
-            self.__width = width
-
-        try:
-            self.integer_validator("height", height)
-        except TypeError:
-            raise TypeError("height must be an integer")
-        except ValueError:
-            raise ValueError("height must be greater than 0")
-        else:
-            self.__height = height      
+        self.integer_validator("height", height)
+        self.__height = height
+        self.integer_validator("width", width)
+        self.__width = width
