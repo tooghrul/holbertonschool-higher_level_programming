@@ -8,4 +8,4 @@ def is_kind_of_class(obj, a_class):
 
 
 if __name__ == "__main__":
-    is_kind_o_class()
+    is_kind_of_class()
