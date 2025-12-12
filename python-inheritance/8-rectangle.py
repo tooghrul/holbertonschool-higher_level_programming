@@ -14,6 +14,7 @@ class BaseGeometry:
 
 
 class Rectangle(BaseGeometry):
+    """This is a Rectangle class which inherits from BaseGeometry class"""
     def __init__(self, width, height):
         super().__init__
         try:
