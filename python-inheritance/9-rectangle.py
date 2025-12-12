@@ -6,6 +6,7 @@ class BaseGeometry:
     """A kinda empty class"""
     def area(self):
         raise Exception("area() is not implemented")
+
     def integer_validator(self, name, value):
         if not isinstance(value, int):
             raise TypeError("{} must be an integer".format(name))
@@ -21,7 +22,9 @@ class Rectangle(BaseGeometry):
         self.__height = height
         self.integer_validator("width", width)
         self.__width = width
+
     def area(self):
         return self.__width * self.__height
+
     def __str__(self):
         return f"[Rectangle] {self.__width}/{self.__height}"
