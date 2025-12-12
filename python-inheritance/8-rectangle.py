@@ -18,7 +18,7 @@ class Rectangle(BaseGeometry):
     def __init__(self, width, height):
         super().__init__()
         try:
-            Rectangle.integer_validator("width", width)
+            self.integer_validator("width", width)
         except TypeError:
             raise TypeError("width must be an integer")
         except ValueError:
@@ -27,7 +27,7 @@ class Rectangle(BaseGeometry):
             self.__width = width
 
         try:
-            Rectangle.integer_validator("height", height)
+            self.integer_validator("height", height)
         except TypeError:
             raise TypeError("height must be an integer")
         except ValueError:
