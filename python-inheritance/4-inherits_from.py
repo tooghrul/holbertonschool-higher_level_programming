@@ -4,7 +4,7 @@
 
 def inherits_from(obj, a_class):
     """It uses issubclass()"""
-    return issubclass(type(obj), a_class) is True
+    return issubclass(type(obj), a_class) is True and type(obj) is not a_clas
 
 
 if __name__ == "__main__":
