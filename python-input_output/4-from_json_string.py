@@ -7,4 +7,4 @@ import json
 
 def from_json_string(my_obj):
     "json.load for the goal"
-    return json.load(my_obj)
+    return json.loads(my_obj)
