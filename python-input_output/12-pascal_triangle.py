@@ -2,6 +2,7 @@
 """Pascal triangle"""
 
 def pascal_triangle(n):
+    """It is a pascal trianle function"""
     if n <= 0:
         return []
 
@@ -17,7 +18,3 @@ def pascal_triangle(n):
         pascal.append(base)
         prev_pascal = base
     return pascal
-
-
-if __name__ == "__main__":
-    print(pascal_triangle(5))
