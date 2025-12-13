@@ -31,11 +31,11 @@ class Rectangle(BaseGeometry):
 
 
 class Square(Rectangle):
-    """This is a Square class which inherits from Rectanle class"""
+    """This is a Square class which inherits from Rectangle class"""
     def __init__(self, size):
         self.integer_validator("size", size)
-        super().__init__(size, size)
         self.__size = size
+        super().__init__(size, size)
 
     def area(self):
         return self.__size ** 2
