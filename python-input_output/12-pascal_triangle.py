@@ -7,7 +7,7 @@ def pascal_triangle(n):
         return []
 
     if n == 1:
-        return [1]
+        return [[1]]
 
     pascal = [[1], [1,1]]
     prev_pascal = pascal[1]
