@@ -5,4 +5,3 @@
 def class_to_json(obj):
     """Using __dict__"""
     return obj.__dict__.copy()
-
