@@ -10,7 +10,7 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=[]):
-        if attrs is []:
+        if attrs is None:
             return self.__dict__.copy()
         else:
             new_dict = {}
