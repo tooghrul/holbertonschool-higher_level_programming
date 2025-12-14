@@ -5,21 +5,24 @@
 import json
 import sys
 
-
 def save_to_json_file(my_obj, filename):
     """This function writes <my_obj> to <filename>"""
-    with open(filename, "w") as f:
-        obj = json.dumps(my_obj)
-        f.write(obj)
-
+    with open(filename, "w", encoding="utf-8") as f:
+        json.dump(my_obj, f)
 
 def load_from_json_file(filename):
-    """This function writes <my_obj> to <filename>"""
+    """This function reads an object from <filename>"""
     with open(filename, "r", encoding="utf-8") as f:
-        obj = json.load(f)
-        return obj
+        return json.load(f)
 
 filename = "add_item.json"
-info = load_from_json_file(filename)
+
+# Try to load existing list, start empty if file doesn't exist
+try:
+    info = load_from_json_file(filename)
+except FileNotFoundError:
+    info = []
+
 info.extend(sys.argv[1:])
-json_file = save_to_json_file(info, "add_item.json")
+save_to_json_file(info, filename)
+
