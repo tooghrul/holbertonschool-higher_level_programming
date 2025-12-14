@@ -18,9 +18,8 @@ def load_from_json_file(filename):
     with open(filename, "r", encoding="utf-8") as f:
         obj = json.load(f)
         return obj
+
 filename = "add_item.json"
 info = load_from_json_file(filename)
+info.extend(sys.argv[1:])
 json_file = save_to_json_file(info, "add_item.json")
-
-if __name__ == "__main__":
-    print(json_file)
