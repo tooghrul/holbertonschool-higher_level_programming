@@ -8,5 +8,5 @@ import json
 def load_from_json_file(filename):
     """This function writes <my_obj> to <filename>"""
     with open(filename, "r") as f:
-        obj = json.loads(filename)
-    return obj
+        obj = json.load(filename)
+        return obj
