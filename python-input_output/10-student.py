@@ -13,8 +13,8 @@ class Student:
         if attrs is []:
             return self.__dict__.copy()
         else:
-            info = dict(self.__dict__)
-            new_info = []
-            for a in attrs:
-                new_info.append(info[a])
-            return new_info
+            new_dict = {}
+            for key, value in self.__dict__.items():
+                if key in attrs:
+                    new_dict[key] = value
+        return new_dict
