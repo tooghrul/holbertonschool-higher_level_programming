@@ -5,15 +5,18 @@
 import json
 import sys
 
+
 def save_to_json_file(my_obj, filename):
     """This function writes <my_obj> to <filename>"""
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(my_obj, f)
 
+
 def load_from_json_file(filename):
     """This function reads an object from <filename>"""
     with open(filename, "r", encoding="utf-8") as f:
         return json.load(f)
+
 
 filename = "add_item.json"
 
