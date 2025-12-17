@@ -1,2 +1,2 @@
 -- Average --
-SELECT AVG(SCORE) FROM second_table;
+SELECT AVG(SCORE) as average FROM second_table;
