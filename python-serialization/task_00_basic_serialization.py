@@ -7,4 +7,4 @@ def serialize_and_save_to_file(data, filename):
 
 def load_and_deserialize(filename):
     with open(filename, mode="r", encoding="utf-8") as fn:
-        return json.loads(filename)
+        return json.load(fn)
