@@ -10,11 +10,11 @@ class CustomObject:
         self.is_student = is_student
 
     def display(self):
-        print(f"
-            Name: {self.name}
-            Age: {self.age}
-            Is Student: {self.is_student}
-        ")
+        print(f"""
+              Name: {self.name}
+              Age: {self.age}
+              Is Student: {self.is_student}
+              """)
 
     def serialize(self, filename):
         with open(filename, "wb") as f:
