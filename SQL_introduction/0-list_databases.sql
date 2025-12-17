@@ -1,2 +1,2 @@
---The query that shows all databases--
+-- The query that shows all databases --
 SHOW DATABASES;
